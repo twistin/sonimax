@@ -1,0 +1,48 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "Corregir Edge Function audio-upload-fixed",
+        "details": "✅ CORREGIDO: AudioUpload.tsx actualizado para usar audio-upload-fixed. Edge Function desplegado correctamente.",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "Implementar configuración operativa completa",
+        "details": "✅ CORREGIDO: Configuracion.tsx reescrito completamente con integración a Supabase profiles, localStorage, CRUD completo.",
+        "status": "completed",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "Simplificar registro de lugares (MapPlanner)",
+        "details": "✅ CORREGIDO: MapPlanner mejorado con Modo Rápido, ayuda contextual, posicionamiento GPS, estadísticas en tiempo real.",
+        "status": "completed",
+        "priority": "high"
+      },
+      "4": {
+        "id": "4",
+        "content": "Crear políticas RLS para seguridad",
+        "details": "⚠️ PENDIENTE: Script SQL RLS_POLICIES_SCRIPT.sql creado, necesita ejecutarse en Supabase SQL Editor.",
+        "status": "in_progress",
+        "priority": "high"
+      },
+      "5": {
+        "id": "5",
+        "content": "Desplegar aplicación corregida",
+        "details": "✅ CORREGIDO: Aplicación desplegada en https://d12d3bc23vco.space.minimax.io con todas las correcciones aplicadas.",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "6": {
+        "id": "6",
+        "content": "Aplicar mejoras responsive para iOS mobile",
+        "details": "Implementar menú hamburguesa, sidebar overlay, optimizaciones iOS Safari. COMPLETADO: Nueva URL desplegada https://46duamzdrlp0.space.minimax.io",
+        "status": "completed",
+        "priority": "high"
+      }
+    }
+  }
+}

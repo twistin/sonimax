@@ -1,0 +1,279 @@
+{
+  "_source_id": 38,
+  "sources": {
+    "Bibliotecas de JavaScript para Visualización de Audio": {
+      "https://wavesurfer.xyz/": {
+        "id": 1,
+        "publisher": "wavesurfer.js",
+        "url": "https://wavesurfer.xyz/",
+        "title": "wavesurfer.js - Biblioteca oficial de visualización de formas de onda",
+        "info": "Información técnica completa sobre wavesurfer.js: API de TypeScript, soporte para Web Audio, plugins disponibles (Regions, Hover, Record, Minimap, Timeline, Spectrogram), licencia BSD-3-Clause"
+      },
+      "https://tonejs.github.io/": {
+        "id": 2,
+        "publisher": "Tone.js",
+        "url": "https://tonejs.github.io/",
+        "title": "Tone.js - Framework de Web Audio para música interactiva",
+        "info": "Documentación completa de Tone.js: síntesis de audio, transporte global, compatibilidad móvil, optimizaciones de rendimiento, API para sintetizadores, efectos y señales"
+      },
+      "https://audiomotion.dev/": {
+        "id": 3,
+        "publisher": "audioMotion.dev",
+        "url": "https://audiomotion.dev/",
+        "title": "audioMotion-analyzer - Analizador de espectro de alta resolución",
+        "info": "Especificaciones técnicas de audioMotion-analyzer: tamaño minificado 30kB, resolución FFT 8192, análisis en tiempo real, escalas logarítmicas, filtros de ponderación, modo low-res para móviles"
+      },
+      "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API": {
+        "id": 4,
+        "publisher": "Mozilla MDN",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API",
+        "title": "Web Audio API - Documentación oficial",
+        "info": "Documentación oficial de Web Audio API: AudioContext, nodos de audio, análisis de frecuencia con AnalyserNode, procesamiento personalizado con AudioWorklet, compatibilidad desde abril 2021"
+      },
+      "https://medium.com/swlh/visualizing-sound-with-d3-and-web-audio-api-435ffea88f30": {
+        "id": 5,
+        "publisher": "Medium",
+        "url": "https://medium.com/swlh/visualizing-sound-with-d3-and-web-audio-api-435ffea88f30",
+        "title": "Visualizing Sound With D3 and Web Audio API",
+        "info": "Tutorial detallado sobre visualización de audio con D3.js: ejemplos de implementación LED, osciloscopio, espirógrafo, escalado dimensional y de color, compatibilidad limitada principalmente a Chrome"
+      },
+      "https://js6450.github.io/audio-viz/index.html": {
+        "id": 6,
+        "publisher": "Jiwon Shin",
+        "url": "https://js6450.github.io/audio-viz/index.html",
+        "title": "Audio Visualization with p5.js",
+        "info": "Tutorial completo de p5.js para visualización de audio: carga de archivos, análisis de micrófono, amplitud, FFT, formas de onda y espectros con ejemplos de código completos"
+      },
+      "https://tympanus.net/codrops/2025/06/18/coding-a-3d-audio-visualizer-with-three-js-gsap-web-audio-api/": {
+        "id": 7,
+        "publisher": "Codrops",
+        "url": "https://tympanus.net/codrops/2025/06/18/coding-a-3d-audio-visualizer-with-three-js-gsap-web-audio-api/",
+        "title": "Coding a 3D Audio Visualizer with Three.js, GSAP & Web Audio API",
+        "info": "Guía detallada para crear visualizador de audio 3D con Three.js, GSAP y Web Audio API: configuración de escena 3D, shaders GLSL, análisis FFT, animaciones con inercia"
+      },
+      "https://blog.logrocket.com/audio-visualizer-from-scratch-javascript/": {
+        "id": 8,
+        "publisher": "LogRocket",
+        "url": "https://blog.logrocket.com/audio-visualizer-from-scratch-javascript/",
+        "title": "Write an audio visualizer from scratch with vanilla JavaScript",
+        "info": "Tutorial paso a paso para crear visualizador de audio con JavaScript vanilla: Canvas API, Web Audio API, configuración HTML/CSS, optimización con Web Workers y OffscreenCanvas"
+      },
+      "https://scribbler.live/2023/08/21/Spectral-Analysis-using-JavaSript.html": {
+        "id": 9,
+        "publisher": "Scribbler",
+        "url": "https://scribbler.live/2023/08/21/Spectral-Analysis-using-JavaSript.html",
+        "title": "Spectral Analysis in JavaScript",
+        "info": "Análisis técnico completo del análisis espectral en JavaScript: conceptos FFT, procesamiento DSP, implementación JavaScript, bibliotecas recomendadas (fft.js, DSP.js) y ejemplos de código"
+      }
+    },
+    "Arquitectura de Audio Web - Mejores Prácticas": {
+      "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices": {
+        "id": 10,
+        "publisher": "Mozilla Developer Network",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices",
+        "title": "Web Audio API best practices",
+        "info": "Mejores prácticas para Web Audio API, manejo de archivos grandes, optimización de memoria, configuraciones recomendadas y bibliotecas como howler.js y tone.js"
+      },
+      "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API": {
+        "id": 11,
+        "publisher": "Mozilla Developer Network",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API",
+        "title": "Web Audio API - MDN Web Docs",
+        "info": "Documentación completa de Web Audio API, arquitectura, capacidades, interfaces clave y limitaciones como ScriptProcessorNode deprecado"
+      },
+      "https://dev.to/hexshift/real-time-audio-spectrograms-in-the-browser-using-web-audio-api-and-canvas-4b2d": {
+        "id": 12,
+        "publisher": "DEV Community",
+        "url": "https://dev.to/hexshift/real-time-audio-spectrograms-in-the-browser-using-web-audio-api-and-canvas-4b2d",
+        "title": "Real-Time Audio Spectrograms in the Browser",
+        "info": "Implementación de espectrogramas en tiempo real con Web Audio API y Canvas, técnicas de optimización y consideraciones de rendimiento"
+      },
+      "https://wavesurfer.xyz/": {
+        "id": 13,
+        "publisher": "wavesurfer.js",
+        "url": "https://wavesurfer.xyz/",
+        "title": "wavesurfer.js - Audio waveform visualization library",
+        "info": "Biblioteca para visualización de formas de onda interactivas, plugins disponibles y casos de uso para mezclado multipista y visualización estilo SoundCloud"
+      },
+      "https://tonejs.github.io/": {
+        "id": 14,
+        "publisher": "Tone.js",
+        "url": "https://tonejs.github.io/",
+        "title": "Tone.js - Web Audio Framework",
+        "info": "Framework completo de Web Audio para síntesis musical, abstracciones de tiempo, sintetizadores, efectos y herramientas para desarrollo musical interactivo"
+      },
+      "https://howlerjs.com/": {
+        "id": 15,
+        "publisher": "GoldFire Studios",
+        "url": "https://howlerjs.com/",
+        "title": "howler.js - JavaScript audio library",
+        "info": "Librería ligera de audio para web moderna con API simplificada, soporte completo de codecs, sprites de audio y compatibilidad cross-browser"
+      },
+      "https://dev.to/mayank_gupta_a98cb879081b/building-a-seamless-file-upload-system-handling-chunked-uploads-and-large-file-uploads-2p8h": {
+        "id": 16,
+        "publisher": "DEV Community",
+        "url": "https://dev.to/mayank_gupta_a98cb879081b/building-a-seamless-file-upload-system-handling-chunked-uploads-and-large-file-uploads-2p8h",
+        "title": "Building a Seamless File Upload System",
+        "info": "Implementación de chunked uploads para archivos grandes, ventajas de resumibilidad, uso eficiente de memoria y manejo de streaming HTTP"
+      },
+      "https://dev.to/lacey_glenn_e95da24922778/how-to-optimize-mobile-apps-for-performance-and-battery-life-14hk": {
+        "id": 17,
+        "publisher": "DEV Community",
+        "url": "https://dev.to/lacey_glenn_e95da24922778/how-to-optimize-mobile-apps-for-performance-and-battery-life-14hk",
+        "title": "How to Optimize Mobile Apps for Performance and Battery Life",
+        "info": "Estrategias de optimización para aplicaciones móviles incluyendo gestión de memoria, optimización de renderizado, procesamiento en segundo plano y consideraciones específicas para audio"
+      },
+      "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet": {
+        "id": 18,
+        "publisher": "Mozilla Developer Network",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet",
+        "title": "Background audio processing using AudioWorklet",
+        "info": "Procesamiento de audio en tiempo real con AudioWorklet, ventajas sobre ScriptProcessorNode deprecado, procesamiento fuera del hilo principal y soporte WebAssembly"
+      },
+      "https://www.fastpix.io/blog/system-design-and-site-architecture-for-an-audio-streaming-app-like-spotify": {
+        "id": 19,
+        "publisher": "FastPix",
+        "url": "https://www.fastpix.io/blog/system-design-and-site-architecture-for-an-audio-streaming-app-like-spotify",
+        "title": "System Design for Audio Streaming App",
+        "info": "Arquitectura completa de aplicaciones de streaming como Spotify, desde ingesta de contenido y entrega CDN hasta microservicios y sistemas de recomendación"
+      }
+    },
+    "APIs de IA para Análisis de Audio y Soundscapes": {
+      "https://platform.openai.com/docs/pricing": {
+        "id": 20,
+        "publisher": "OpenAI",
+        "url": "https://platform.openai.com/docs/pricing",
+        "title": "API Pricing - OpenAI",
+        "info": "Precios oficiales de OpenAI API incluyendo Whisper ($0.006/minuto), modelos gpt-4o-transcribe y capacidades de texto a voz"
+      },
+      "https://aws.amazon.com/transcribe/pricing/": {
+        "id": 21,
+        "publisher": "Amazon Web Services",
+        "url": "https://aws.amazon.com/transcribe/pricing/",
+        "title": "Amazon Transcribe Pricing",
+        "info": "Precios detallados de Amazon Transcribe con tiers escalonados desde $0.024/minuto hasta $0.0078/minuto para volúmenes grandes"
+      },
+      "https://azure.microsoft.com/en-us/products/ai-services/ai-speech": {
+        "id": 22,
+        "publisher": "Microsoft Azure",
+        "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-speech",
+        "title": "Azure AI Speech",
+        "info": "Capacidades de Azure Speech Services incluyendo speech-to-text, análisis de audio, traducción y reconocimiento de hablantes"
+      },
+      "https://cloud.google.com/speech-to-text/pricing": {
+        "id": 23,
+        "publisher": "Google Cloud",
+        "url": "https://cloud.google.com/speech-to-text/pricing",
+        "title": "Speech-to-Text API Pricing",
+        "info": "Precios de Google Cloud Speech-to-Text desde $0.016/minuto para modelos estándar, con descuentos por volumen y procesamiento batch dinámico"
+      },
+      "https://cloud.ibm.com/catalog/services/speech-to-text": {
+        "id": 24,
+        "publisher": "IBM Cloud",
+        "url": "https://cloud.ibm.com/catalog/services/speech-to-text",
+        "title": "Speech to Text - IBM Cloud",
+        "info": "Características de IBM Watson Speech to Text incluyendo personalización de modelos, detección de palabras clave y capacidades de seguridad"
+      },
+      "https://deepgram.com/pricing": {
+        "id": 25,
+        "publisher": "Deepgram",
+        "url": "https://deepgram.com/pricing",
+        "title": "Pricing & Plans - Deepgram",
+        "info": "Estructura completa de precios de Deepgram para speech-to-text, text-to-speech, voice agent API y audio intelligence desde $0.0035/minuto"
+      },
+      "https://www.assemblyai.com/pricing": {
+        "id": 26,
+        "publisher": "AssemblyAI",
+        "url": "https://www.assemblyai.com/pricing",
+        "title": "Pricing | Production-ready AI Models",
+        "info": "Precios de AssemblyAI desde $0.15/hora para transcripción universal, con servicios adicionales de speech understanding y análisis LLM"
+      },
+      "https://www.speechmatics.com/pricing": {
+        "id": 27,
+        "publisher": "Speechmatics",
+        "url": "https://www.speechmatics.com/pricing",
+        "title": "Pricing for our Speech API services",
+        "info": "Precios de Speechmatics con plan gratuito de 8 horas/mes, plan Pro desde $0.24/hora, soporta 55+ idiomas con características enterprise"
+      },
+      "https://birdnet.cornell.edu/": {
+        "id": 28,
+        "publisher": "Cornell Lab of Ornithology",
+        "url": "https://birdnet.cornell.edu/",
+        "title": "BirdNET Sound ID",
+        "info": "Plataforma gratuita para identificación de aves por sonido usando deep learning, identifica ~3,000 especies globalmente con apps móviles y análisis web"
+      },
+      "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.70134": {
+        "id": 29,
+        "publisher": "Methods in Ecology and Evolution",
+        "url": "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.70134",
+        "title": "A novel protocol for exploratory analysis of unknown sound‐types",
+        "info": "Protocolo para clasificación de sonidos ambientales sin datos etiquetados usando índices beta acústicos y clustering, aplicable a soundscapes naturales"
+      }
+    },
+    "APIs para Mapas Interactivos y Meteorológicos - Soundscapes": {
+      "https://mapsplatform.google.com/pricing/": {
+        "id": 30,
+        "publisher": "Google Maps Platform",
+        "url": "https://mapsplatform.google.com/pricing/",
+        "title": "Google Maps Platform - Pricing y características 2025",
+        "info": "Información detallada sobre pricing 2025, nuevos cambios de billing desde marzo 2025, tiers gratuitos (10,000-100,000 llamadas por SKU), características para mapas 3D, aerial view, dynamic maps, y nuevas categorías de pricing Essentials/Pro/Enterprise"
+      },
+      "https://openweathermap.org/price": {
+        "id": 31,
+        "publisher": "OpenWeatherMap",
+        "url": "https://openweathermap.org/price",
+        "title": "OpenWeatherMap API Pricing y características",
+        "info": "Pricing detallado: Startup $40/mes (1000 llamadas gratis diarias), Developer $120/mes, Professional $500/mes, Expert $1200/mes. Incluye datos actualizados cada 2-10 minutos según plan, cobertura global, API gratuita para primeros 1000 calls diarios"
+      },
+      "https://www.weatherapi.com/pricing.aspx": {
+        "id": 32,
+        "publisher": "WeatherAPI.com",
+        "url": "https://www.weatherapi.com/pricing.aspx",
+        "title": "WeatherAPI.com pricing y características",
+        "info": "Planes desde gratuito hasta Enterprise personalizado. Free: 1M llamadas/mes, Starter $7/mes (3M llamadas), Pro+ $25/mes (5M llamadas), Business $35/mes (10M llamadas). Actualización cada 10-15 minutos, precisión global"
+      },
+      "https://developer.accuweather.com/pricing": {
+        "id": 33,
+        "publisher": "AccuWeather Developer",
+        "url": "https://developer.accuweather.com/pricing",
+        "title": "AccuWeather Developer API Pricing",
+        "info": "AccuWeather ofrece Core Weather API (desde trial gratis hasta Elite $500/mes) y MinuteCast API (desde trial gratis hasta Full $100/mes). Requiere atribución con logo, desde 500 llamadas trial hasta 2.4M llamadas en plan Elite"
+      },
+      "https://www.mapbox.com/pricing": {
+        "id": 34,
+        "publisher": "Mapbox",
+        "url": "https://www.mapbox.com/pricing",
+        "title": "Mapbox API Pricing 2025",
+        "info": "Mapbox pricing: MAU gratuito hasta 25K usuarios, cargas de mapas web gratuitas hasta 50K, geocoding gratuito hasta 100K requests. Modelo pay-as-you-go con descuentos por volumen. Costos desde $0.75-$5.00 por 1000 requests según volumen"
+      },
+      "https://wiki.openstreetmap.org/wiki/API": {
+        "id": 35,
+        "publisher": "OpenStreetMap Foundation",
+        "url": "https://wiki.openstreetmap.org/wiki/API",
+        "title": "OpenStreetMap API - Limitaciones y usos recomendados",
+        "info": "OpenStreetMap API v0.6 es gratuita pero diseñada solo para edición, no para lectura. Para aplicaciones comerciales se recomienda usar Leaflet, Overpass API o proveedores comerciales. Políticas estrictas para evitar sobrecarga del servicio"
+      },
+      "https://arxiv.org/html/2505.18726v1": {
+        "id": 36,
+        "publisher": "arXiv",
+        "url": "https://arxiv.org/html/2505.18726v1",
+        "title": "Audio Geolocation: A Natural Sounds Benchmark",
+        "info": "Investigación académica sobre geolocalización basada en soundscapes naturales. Precisión varía desde 1082 km error mediano hasta 15 km con lista completa de especies. Análisis específico para aplicaciones de audio-ubicación"
+      },
+      "https://www.meteomatics.com/en/weather-api/best-weather-apis/": {
+        "id": 37,
+        "publisher": "Meteomatics",
+        "url": "https://www.meteomatics.com/en/weather-api/best-weather-apis/",
+        "title": "Best Weather APIs 2025: Comparison",
+        "info": "Comparación técnica de weather APIs: Meteomatics (1800+ parámetros, 1km resolución), OpenWeatherMap (30 parámetros, ML+ML), AccuWeather (80-100 parámetros, datos tropicales). Meteomatics lidera en precisión, AccuWeather requiere logo obligatorio"
+      },
+      "https://www.meteosource.com/blog/comparison-open-weather-map-alternatives": {
+        "id": 38,
+        "publisher": "Meteosource",
+        "url": "https://www.meteosource.com/blog/comparison-open-weather-map-alternatives",
+        "title": "Comparison: Open Weather Map Alternatives - Precision Analysis",
+        "info": "Comparación de precisión: AccuWeather supera OpenWeatherMap en precisión pero es más caro y menos avanzado. Meteosource se considera superior a OpenWeatherMap usando ML avanzado para combinar múltiples modelos meteorológicos"
+      }
+    }
+  }
+}
