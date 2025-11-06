@@ -6,7 +6,9 @@ import WaveformViewer from '../components/WaveformViewer';
 import BirdNETAnalysis from '../components/BirdNETAnalysis';
 import RealtimeSpectrogram from '../components/RealtimeSpectrogram';
 import BatchAnalysis from '../components/BatchAnalysis';
-import { Mic, Play, Download, BarChart2, Tag as TagIcon, Upload, X, Bird, Layers } from 'lucide-react';
+import AcousticIndicesDisplay from '../components/AcousticIndicesDisplay';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../components/ui/dialog';
+import { Mic, Play, Download, BarChart2, Tag as TagIcon, Upload, X, Bird, Layers, Activity } from 'lucide-react';
 
 export default function Grabaciones() {
   const queryClient = useQueryClient();
@@ -15,6 +17,9 @@ export default function Grabaciones() {
   const [selectedAudio, setSelectedAudio] = useState<any>(null);
   const [selectedProyecto, setSelectedProyecto] = useState<string>('');
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showAcousticIndices, setShowAcousticIndices] = useState(false);
+  const [showFilters, setShowFilters] = useState(false);
+  const [audioContextForFilters, setAudioContextForFilters] = useState<AudioContext | null>(null);
   const audioRef = useState<HTMLAudioElement | null>(null)[0];
 
   // Cargar detecciones de BirdNET para la grabación seleccionada
@@ -195,11 +200,23 @@ export default function Grabaciones() {
 
           {/* Espectrograma */}
           {selectedAudio.metadata_extras?.storage_url && (
-            <RealtimeSpectrogram
-              audioUrl={selectedAudio.metadata_extras.storage_url}
-              isPlaying={isPlaying}
-              onPlayPause={() => setIsPlaying(!isPlaying)}
-            />
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setShowAcousticIndices(true)}
+                  className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                >
+                  <BarChart2 className="w-4 h-4" />
+                  Índices Acústicos
+                </button>
+              </div>
+
+              <RealtimeSpectrogram
+                audioUrl={selectedAudio.metadata_extras.storage_url}
+                isPlaying={isPlaying}
+                onPlayPause={() => setIsPlaying(!isPlaying)}
+              />
+            </div>
           )}
 
           {/* Análisis BirdNET */}
@@ -215,7 +232,7 @@ export default function Grabaciones() {
         </div>
       )}
 
-      {/* Tabla de grabaciones */}
+      {/* Lista de grabaciones - Tabla temporal hasta resolver issue de react-window en build */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
@@ -281,9 +298,6 @@ export default function Grabaciones() {
                       >
                         <Play className="w-4 h-4" />
                       </button>
-                      <button className="text-gray-600 hover:text-gray-900 p-1" title="Analizar">
-                        <BarChart2 className="w-4 h-4" />
-                      </button>
                       {grabacion.metadata_extras?.storage_url && (
                         <a
                           href={grabacion.metadata_extras.storage_url}
@@ -310,6 +324,24 @@ export default function Grabaciones() {
           <p className="text-gray-600">Haz clic en "Subir Audio" para agregar tu primera grabación</p>
         </div>
       )}
+
+      {/* Modal de Índices Acústicos */}
+      <Dialog open={showAcousticIndices} onOpenChange={setShowAcousticIndices}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Análisis de Índices Acústicos</DialogTitle>
+            <DialogDescription>
+              Calcula índices acústicos científicos (ACI, ADI, BI) para analizar el paisaje sonoro
+            </DialogDescription>
+          </DialogHeader>
+          {selectedAudio?.metadata_extras?.storage_url && (
+            <AcousticIndicesDisplay 
+              audioUrl={selectedAudio.metadata_extras.storage_url}
+              recordingId={selectedAudio.id}
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

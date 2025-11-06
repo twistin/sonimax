@@ -38,7 +38,12 @@
     "noUncheckedSideEffectImports": false
   },
   "include": [
-    "src",
+    "src"
+  ],
+  "exclude": [
+    "src/**/__tests__/**",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
     "vitest.config.ts",
     "src/setupTests.ts"
   ]

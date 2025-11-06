@@ -33,7 +33,7 @@ const RealTimeRecorder: React.FC<RealTimeRecorderProps> = ({
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<number | null>(null);
   const watchIdRef = useRef<number | null>(null);
 
   const { isLoaded } = useJsApiLoader({

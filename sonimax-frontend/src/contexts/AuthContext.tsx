@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { User } from '@supabase/supabase-js';
 import { supabase } from '../lib/supabase';
+import { setUserContext, clearUserContext, addBreadcrumb } from '../lib/monitoring';
 
 interface AuthContextType {
   user: User | null;
@@ -32,7 +33,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // Listener de cambios de autenticación - SIN operaciones async
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (_event, session) => {
-        setUser(session?.user || null);
+        const newUser = session?.user || null;
+        setUser(newUser);
+        
+        // Actualizar contexto de Sentry
+        if (newUser) {
+          setUserContext({
+            id: newUser.id,
+            email: newUser.email,
+            username: newUser.user_metadata?.nombre,
+          });
+          addBreadcrumb('Usuario autenticado', 'auth', { userId: newUser.id });
+        } else {
+          clearUserContext();
+          addBreadcrumb('Usuario cerró sesión', 'auth');
+        }
       }
     );
 
